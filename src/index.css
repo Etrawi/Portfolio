@@ -1,0 +1,13 @@
+html {
+  scroll-behavior: smooth; /* تجعل الصفحة تنزلق بنعومة عند الضغط على الروابط */
+}
+
+body {
+  margin: 0;
+  font-family: 'DM Sans', sans-serif; /* الخط الأساسي للتصميم */
+  background-color: #ffffff;
+}
+
+section, footer {
+  scroll-margin-top: 90px; /* مسافة أمان حتى لا يغطي الهيدر العناوين */
+}
