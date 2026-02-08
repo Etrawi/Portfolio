@@ -1,36 +1,65 @@
 import React from 'react';
 
-// لاحظ هنا إننا بنستخدم export عادي مش default عشان نقدر نطلع الـ Navbar والـ Footer مع بعض
 export const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-white pt-4 pb-2 container">
-      <div className="container-fluid d-flex justify-content-end align-items-center">
-        
-        {/* روابط القائمة */}
-        <div className="navbar-nav flex-row gap-5 me-5">
-          <a className="nav-link fw-medium p-0" href="#home" style={{ color: '#666666', fontSize: '18px' }}>Home</a>
-          <a className="nav-link fw-medium p-0" href="#about" style={{ color: '#666666', fontSize: '18px' }}>About</a>
-          <a className="nav-link fw-medium p-0" href="#tech" style={{ color: '#666666', fontSize: '18px' }}>Tech Stack</a>
-          <a className="nav-link fw-medium p-0" href="#projects" style={{ color: '#666666', fontSize: '18px' }}>Projects</a>
-          <a className="nav-link fw-medium p-0" href="#contact" style={{ color: '#666666', fontSize: '18px' }}>Contact</a>
-        </div>
+    <nav className="navbar navbar-expand-lg bg-white py-4 sticky-top">
+      <div className="container">
+        {/* اللوجو أو الاسم (يمكنك تغييره لصورة لو أردت) */}
+        <a className="navbar-brand fw-bold fs-4" href="#" style={{ color: '#42446E' }}>
+          {/* يمكنك وضع <img> هنا لو عندك لوجو، أو تركه نص */}
+          {/* portfolio */}
+        </a>
 
-        {/* أيقونات التواصل - استخدمنا FontAwesome كلاسات مباشرة */}
-        <div className="d-flex gap-3 align-items-center">
-          <a href="#" className="text-secondary"><i className="fab fa-github fs-4"></i></a>
-          <a href="#" className="text-secondary"><i className="fab fa-twitter fs-4"></i></a>
-          <a href="#" className="text-secondary"><i className="fab fa-linkedin fs-4"></i></a>
+        <button 
+          className="navbar-toggler" 
+          type="button" 
+          data-bs-toggle="collapse" 
+          data-bs-target="#navbarNav"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+
+        <div className="collapse navbar-collapse" id="navbarNav">
+          {/* روابط القائمة في المنتصف */}
+          <ul className="navbar-nav ms-auto me-auto mb-2 mb-lg-0 gap-4 fw-medium" style={{ fontSize: '18px' }}>
+            <li className="nav-item">
+              <a className="nav-link text-dark" href="#home">Home</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link text-dark" href="#about">About</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link text-dark" href="#tech">Tech Stack</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link text-dark" href="#projects">Projects</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link text-dark" href="#contact">Contact</a>
+            </li>
+          </ul>
+
+          {/* 👇👇 أيقونات السوشيال ميديا (التعديل هنا) 👇👇 */}
+          <div className="d-flex gap-3 align-items-center mt-3 mt-lg-0">
+            
+            {/* 1. GitHub */}
+            <a href="https://github.com/Etrawi" target="_blank" rel="noopener noreferrer" className="text-dark fs-5">
+              <i className="fab fa-github"></i>
+            </a>
+
+            {/* 2. LinkedIn */}
+            <a href="https://www.linkedin.com/in/etrawi" target="_blank" rel="noopener noreferrer" className="text-dark fs-5">
+              <i className="fab fa-linkedin"></i>
+            </a>
+
+            {/* 3. WhatsApp (الجديد ✅) */}
+            <a href="https://wa.me/201011715804" target="_blank" rel="noopener noreferrer" className="text-dark fs-5">
+              <i className="fab fa-whatsapp"></i>
+            </a>
+            
+          </div>
         </div>
-        
       </div>
     </nav>
-  );
-};
-
-export const Footer = () => {
-  return (
-    <footer className="container py-4 border-top mt-5">
-      <p className="text-center text-muted">© 2026 ANWR MOHAMED</p>
-    </footer>
   );
 };
