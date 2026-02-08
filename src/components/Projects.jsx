@@ -13,49 +13,61 @@ const Projects = () => {
       title: "MediBook", 
       icon: "fa-solid fa-stethoscope",
       tech: "React.js, Vite, CSS, Git.", 
-      desc: "Collaborated with the team to design, implement Collaborated with the team to design, implement responsive UI, smooth UX,medical booking platform simplify appointment scheduling for patients, doctors. UI, smooth UX medical booking platform.", 
-      img: MediBookImg, //
-      colorGradient: 'linear-gradient(to right, #0084D4, #75D4FF)' 
+      desc: "Collaborated with the team to design, implement responsive UI, smooth UX,medical booking platform simplify appointment scheduling for patients, doctors.", 
+      img: MediBookImg, 
+      colorGradient: 'linear-gradient(to right, #0084D4, #75D4FF)',
+      githubLink: "#",   // ضيف لينك جيت هاب هنا مستقبلاً
+      demoLink: "#"      // ضيف لينك الموقع هنا مستقبلاً
     },
     { 
       title: "Nexcent Agency", 
       icon: "fa-solid fa-leaf",
       tech: "HTML5, CSS3, Bootstrap, JS.", 
       desc: "Developed landing page for a digital agency as part of the DEPI grant, practical training. This project focuses on mastering UI layout structures.", 
-      img: nexcentImg, //
-      colorGradient: 'linear-gradient(to right, #4CAF4F, #39833B)' 
+      img: nexcentImg, 
+      colorGradient: 'linear-gradient(to right, #4CAF4F, #39833B)',
+      githubLink: "https://github.com/Etrawi/Nexcent", // ✅ تم إضافة لينك المشروع
+      demoLink: null     // ❌ تم إلغاء زرار Live Preview لهذا المشروع
     },
     { 
       title: "Modern Contact", 
       icon: "fa-solid fa-tower-broadcast",
       tech: "HTML5, CSS3, Bootstrap.", 
-      desc: "Designed implemented Designed implemented a fully responsive contact section, features a split-layout design a background overlay, custom-styled form inputs using input groups, consistent typography.a fully responsive contact section, features a split-layout design.", 
-      img: modernImg, //
-      colorGradient: 'linear-gradient(to right, #323B4B, #fee140)' 
+      desc: "Designed implemented a fully responsive contact section, features a split-layout design a background overlay, custom-styled form inputs.", 
+      img: modernImg, 
+      colorGradient: 'linear-gradient(to right, #323B4B, #fee140)',
+      githubLink: "#",
+      demoLink: "#"
     },
     { 
       title: "Pricing Plans", 
       icon: "fa-solid fa-tags",
       tech: "HTML5, CSS3, FontAwesome.", 
-      desc: "Built a modern pricing table. Built a modern pricing table The design utilizes negative margins to create a floating element effect The layout structured with Flexbox perfect alignment responsiveness.The design utilizes negative margins to create a floating element.", 
-      img: pricingImg, //
-      colorGradient: 'linear-gradient(to right, #667eea, #764ba2)' 
+      desc: "Built a modern pricing table. The design utilizes negative margins to create a floating element effect The layout structured with Flexbox.", 
+      img: pricingImg, 
+      colorGradient: 'linear-gradient(to right, #667eea, #764ba2)',
+      githubLink: "#",
+      demoLink: "#"
     },
     { 
       title: "Authentication", 
       icon: "fa-solid fa-key",
       tech: "HTML5, CSS3, Flexbox.", 
-      desc: "A clean, functionA clean, functional login interface, The project focuses on perfect vertical, horizontal alignment, form semantics,interactive states for buttons inputsal login interface. The project focuses on perfect vertical, horizontal alignment.", 
-      img: authImg, //
-      colorGradient: 'linear-gradient(to right, #FF40CF, #000000)' 
+      desc: "A clean, functional login interface. The project focuses on perfect vertical, horizontal alignment, form semantics, interactive states.", 
+      img: authImg, 
+      colorGradient: 'linear-gradient(to right, #FF40CF, #000000)',
+      githubLink: "#",
+      demoLink: "#"
     },
     { 
       title: "Focus", 
       icon: "fa-solid fa-camera",
       tech: "HTML5, CSS3, Bootstrap.", 
-      desc: "Built responsive, vBuilt responsive, visually immersive photography platform ensuring fast loading times, seamless browsing experience for clients.isually immersive photography platform ensuring fast loading times.", 
-      img: focusImg, //
-      colorGradient: 'linear-gradient(to right, #FFEA83, #A1A850)' 
+      desc: "Built responsive, visually immersive photography platform ensuring fast loading times, seamless browsing experience for clients.", 
+      img: focusImg, 
+      colorGradient: 'linear-gradient(to right, #FFEA83, #A1A850)',
+      githubLink: "#",
+      demoLink: "#"
     },
   ];
 
@@ -75,7 +87,7 @@ const Projects = () => {
               </div>
               
               <div className="card-body p-4 d-flex flex-column text-center align-items-center">
-                {/* الأيقونة والاسم بنفس الـ Gradient */}
+                {/* الأيقونة والاسم */}
                 <div className="mb-3 d-flex align-items-center gap-2">
                    <i className={p.icon} style={{ 
                      background: p.colorGradient,
@@ -97,10 +109,18 @@ const Projects = () => {
                 </p>
                 
                 <div className="d-flex justify-content-between align-items-center w-100 mt-auto border-top pt-3">
-                  <a href="#" className="text-dark text-decoration-none small">
-                    <i className="fas fa-link me-2"></i> Live Preview
-                  </a>
-                  <a href="#" className="text-dark text-decoration-none small">
+                  
+                  {/* زر Live Preview يظهر فقط لو فيه لينك */}
+                  {p.demoLink ? (
+                    <a href={p.demoLink} target="_blank" rel="noopener noreferrer" className="text-dark text-decoration-none small">
+                      <i className="fas fa-link me-2"></i> Live Preview
+                    </a>
+                  ) : (
+                    <span></span> /* مكان فاضي عشان التنسيق يفضل مضبوط */
+                  )}
+
+                  {/* زر GitHub */}
+                  <a href={p.githubLink} target="_blank" rel="noopener noreferrer" className="text-dark text-decoration-none small">
                     <i className="fab fa-github me-2"></i> View Code
                   </a>
                 </div>
