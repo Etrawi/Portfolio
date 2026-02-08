@@ -22,10 +22,40 @@ const Footer = () => {
       {/* بيانات التواصل السريعة قبل الخط الفاصل */}
       <div className="d-flex justify-content-end align-items-center gap-5 mb-4 text-secondary" style={{ fontSize: '18px' }}>
         <span>+20 10 11 71 58 04</span>
+        
         <div className="d-flex gap-3">
-          <a href="#" className="text-dark"><i className="fab fa-github"></i></a>
-          <a href="#" className="text-dark"><i className="fab fa-twitter"></i></a>
-          <a href="#" className="text-dark"><i className="fab fa-linkedin"></i></a>
+          
+          {/* 1. رابط جيت هاب (GitHub) */}
+          <a 
+            href="https://github.com/Etrawi" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="text-dark"
+          >
+            <i className="fab fa-github"></i>
+          </a>
+
+          {/* 2. رابط لينكد إن (LinkedIn) */}
+          <a 
+            href="https://www.linkedin.com/in/etrawi" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="text-dark"
+          >
+            <i className="fab fa-linkedin"></i>
+          </a>
+
+          {/* 3. رابط واتساب (WhatsApp) - جاهز ويعمل مباشرة ✅ */}
+          <a 
+            href="https://wa.me/201011715804" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="text-dark"
+            title="Chat on WhatsApp"
+          >
+            <i className="fab fa-whatsapp"></i>
+          </a>
+
         </div>
       </div>
 

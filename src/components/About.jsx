@@ -20,7 +20,7 @@ const About = () => {
         {/* Experience 1: Frontend Team Leader */}
         <div className="border-bottom pb-3 mb-4">
           <div className="d-flex justify-content-between align-items-center mb-1">
-            <h4 className="mb-0 text-secondary fw-normal">Frontend Team Leader (Trainee)</h4>
+            <h4 className="mb-0 text-secondary fw-normal">Frontend (Trainee)</h4>
             <span className="badge rounded-pill px-3 py-1" style={{ backgroundColor: '#D7FFE0', color: '#018C0F' }}>Full Time</span>
           </div>
           <div className="d-flex justify-content-between text-muted small">
